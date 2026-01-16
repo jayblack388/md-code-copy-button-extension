@@ -48,11 +48,7 @@ jobs:
         run: |
           gh release upload ${{ needs.release-please.outputs.tag_name }} *.vsix
 
-      # Publish to Open VSX Registry
-      # Requires OVSX_PAT secret with an Open VSX access token
-      # Get your token at: https://open-vsx.org/user-settings/tokens
       - name: Publish to Open VSX
-        if: ${{ vars.PUBLISH_TO_OPEN_VSX == 'true' }}
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
         run: yarn ovsx publish *.vsix -p $OVSX_PAT
