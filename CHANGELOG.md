@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/jayblack388/md-code-copy-button-extension/compare/v1.0.0...v1.0.1) (2026-01-16)
+
+
+### Bug Fixes
+
+* use yarn in CI workflow ([a88b400](https://github.com/jayblack388/md-code-copy-button-extension/commit/a88b40036b364008c8bb4d479944f304614f2e5e))
+
 ## 1.0.0 (2026-01-16)
 
 
