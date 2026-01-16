@@ -1,0 +1,49 @@
+{
+  "name": "markdown-copy-button",
+  "displayName": "Markdown Preview Copy Button",
+  "description": "Adds a copy button to code blocks in the Markdown preview",
+  "version": "0.1.0",
+  "publisher": "jayblack388",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0",
+    "node": ">=18.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "preview",
+    "copy",
+    "code",
+    "clipboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayblack388/md-code-copy-button-extension"
+  },
+  "contributes": {
+    "markdown.previewStyles": [
+      "./media/copy-button.css"
+    ],
+    "markdown.previewScripts": [
+      "./media/copy-button.js"
+    ]
+  },
+  "scripts": {
+    "commit": "cz",
+    "package": "vsce package --no-yarn"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "ovsx": "^0.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
