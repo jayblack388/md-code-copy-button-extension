@@ -47,7 +47,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload ${{ needs.release-please.outputs.tag_name }} *.vsix
+          gh release upload ${{ needs.release-please.outputs.tag_name }} *.vsix --clobber
 
       - name: Publish to Open VSX
         env:
