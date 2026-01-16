@@ -34,12 +34,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Package extension
-        run: npm run package
+        run: yarn package
 
       - name: Upload VSIX to GitHub release
         env:
@@ -54,4 +55,4 @@ jobs:
         if: ${{ vars.PUBLISH_TO_OPEN_VSX == 'true' }}
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
-        run: npx ovsx publish *.vsix -p $OVSX_PAT
+        run: yarn ovsx publish *.vsix -p $OVSX_PAT
