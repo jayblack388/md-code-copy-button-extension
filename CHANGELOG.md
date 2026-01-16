@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/jayblack388/md-code-copy-button-extension/compare/v1.0.1...v1.0.2) (2026-01-16)
+
+
+### Bug Fixes
+
+* Try again on release flow ([3f1f8b5](https://github.com/jayblack388/md-code-copy-button-extension/commit/3f1f8b5be4e719957d0a99b4805fe3375854f28d))
+* Try to actually publish the thing ([ae56718](https://github.com/jayblack388/md-code-copy-button-extension/commit/ae5671854be08cad687d48f90e424a99d3fa4f62))
+
 ## [1.0.1](https://github.com/jayblack388/md-code-copy-button-extension/compare/v1.0.0...v1.0.1) (2026-01-16)
 
 
