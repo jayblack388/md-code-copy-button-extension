@@ -3,6 +3,7 @@
   "displayName": "Markdown Preview Copy Button",
   "description": "Adds a copy button to code blocks in the Markdown preview",
   "version": "1.0.3",
+  "icon": "images/icon.png",
   "publisher": "jayblack388",
   "license": "MIT",
   "engines": {
