@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/jayblack388/md-code-copy-button-extension/compare/v1.0.5...v1.0.6) (2026-01-18)
+
+
+### Bug Fixes
+
+* sync version to 1.0.4 and fix ovsx publish command ([3ad78a3](https://github.com/jayblack388/md-code-copy-button-extension/commit/3ad78a34aabea7fdddc9f4afd56f585e02154a2d))
+
 ## [1.0.5](https://github.com/jayblack388/md-code-copy-button-extension/compare/v1.0.4...v1.0.5) (2026-01-17)
 
 
