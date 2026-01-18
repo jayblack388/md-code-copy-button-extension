@@ -1,31 +1,20 @@
 name: Publish
 
 on:
-  pull_request:
-    types: [closed]
-    branches: [main]
+  release:
+    types: [published]
 
 permissions:
   contents: write
 
 jobs:
   publish:
-    # Only run when a release PR is merged
-    if: |
-      github.event.pull_request.merged == true &&
-      contains(github.event.pull_request.labels.*.name, 'autorelease: pending')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Get latest tag
-        id: tag
-        run: |
-          git fetch --tags
-          TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
-          echo "Found tag: $TAG"
+        with:
+          ref: ${{ github.event.release.tag_name }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -40,13 +29,12 @@ jobs:
         run: yarn package
 
       - name: Upload VSIX to GitHub release
-        if: steps.tag.outputs.tag != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release upload ${{ steps.tag.outputs.tag }} *.vsix --clobber
+          gh release upload ${{ github.event.release.tag_name }} *.vsix --clobber
 
       - name: Publish to Open VSX
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
-        run: yarn ovsx publish *.vsix -p $OVSX_PAT
+        run: npx ovsx publish *.vsix -p $OVSX_PAT
