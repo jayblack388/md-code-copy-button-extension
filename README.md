@@ -25,7 +25,7 @@ Search for "Markdown Preview Copy Button" in the VS Code Extensions view.
 ### From VSIX
 
 ```bash
-code --install-extension markdown-copy-button-0.1.0.vsix
+code --install-extension markdown-copy-button-CURRENT_VERSION.vsix
 ```
 
 ## Development
