@@ -7,7 +7,7 @@ A lightweight VS Code extension that adds a **Copy** button to code blocks in th
 - 📋 One-click copy for any fenced code block
 - 🎨 Theme-aware styling (works with light and dark themes)
 - ⚡ Lightweight — no dependencies, just CSS and JS injection
-- 🤝 Plays nicely with other Markdown extensions
+- 🤝 Plays nicely with other Markdown extension
 
 ## Usage
 
